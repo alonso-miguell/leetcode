@@ -1,4 +1,7 @@
-public static void main(String[] args) {
+package leetcode.easy;
+
+public class Palindrome {
+    public static void main(String[] args) {
     /*
 
     Leetcode #125: https://leetcode.com/problems/valid-palindrome/description/
@@ -30,25 +33,26 @@ public static void main(String[] args) {
      */
 
 //            String s = " ";
-            String s = "race a car";
+        String s = "race a car";
 //            String s = "A man, a plan, a canal: Panama";
 //            String s = "Anita lava la tina";
-            System.out.println(isPalindrome(s));
-}
+        System.out.println(isPalindrome(s));
+    }
 
-public static boolean isPalindrome(String s) {
-    String lowerCase = s.toLowerCase();
-    StringBuilder sb = new StringBuilder();
+    public static boolean isPalindrome(String s) {
+        String lowerCase = s.toLowerCase();
+        StringBuilder sb = new StringBuilder();
 
-    for (char c : lowerCase.toCharArray()) {
-        if (Character.isLetterOrDigit(c)) {
-            sb.append(c);
+        for (char c : lowerCase.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) {
+                sb.append(c);
+            }
         }
-    }
 
-    for (int i = 0; i < sb.length(); i++) {
-        if (sb.charAt(i) != sb.charAt(sb.length() - 1 - i)) return false;
-    }
+        for (int i = 0; i < sb.length(); i++) {
+            if (sb.charAt(i) != sb.charAt(sb.length() - 1 - i)) return false;
+        }
 
-    return true;
+        return true;
+    }
 }
