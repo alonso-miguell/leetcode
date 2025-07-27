@@ -36,34 +36,33 @@ import java.util.Stack;
 
 public class ValidParentheses {
     public static void main(String[] args) {
-        String s1="()";
-        System.out.println(s1+" isValid = " + isValid(s1));
-        String s2="([)]";
-        System.out.println(s2+" isValid = " + isValid(s2));
-        String s3="(]";
-        System.out.println(s3+" isValid = " + isValid(s3));
-        String s4="([])";
-        System.out.println(s4+" isValid = " + isValid(s4));
+        String s1 = "()";
+        System.out.println(s1 + " isValid = " + isValid(s1));
+        String s2 = "([)]";
+        System.out.println(s2 + " isValid = " + isValid(s2));
+        String s3 = "(]";
+        System.out.println(s3 + " isValid = " + isValid(s3));
+        String s4 = "([])";
+        System.out.println(s4 + " isValid = " + isValid(s4));
     }
 
     public static boolean isValid(String s) {
-        char[] chars=s.toCharArray();
-        if(s.toCharArray().length<2)
+        char[] chars = s.toCharArray();
+        if (s.toCharArray().length < 2)
             return false;
 
-        Stack<Character> stack=new Stack<>();
+        Stack<Character> stack = new Stack<>();
 
-        for(char c: chars){
-            if(c=='('|| c=='[' || c== '{' ){
+        for (char c : chars) {
+            if (c == '(' || c == '[' || c == '{') {
                 stack.push(c);
-            }
-            else{
-                if(stack.isEmpty() ||
-                        ( (c==')' && stack.peek()!='(') ||
-                                (c==']' && stack.peek()!='[') ||
-                                (c=='}' && stack.peek()!='{')
+            } else {
+                if (stack.isEmpty() ||
+                        ((c == ')' && stack.peek() != '(') ||
+                                (c == ']' && stack.peek() != '[') ||
+                                (c == '}' && stack.peek() != '{')
                         )
-                ){
+                ) {
                     return false;
                 }
 
