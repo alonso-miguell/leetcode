@@ -37,6 +37,7 @@ public class SmallestInfiniteSet {
     private int pointToSmallest;
 
     public SmallestInfiniteSet() {
+        //constraint says that greatest number is 1000 thus used this number
         this.set = new Integer[1001];
         for (int i = 1; i < 1001; i++) {
             this.set[i] = i;
