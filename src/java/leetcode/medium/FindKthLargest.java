@@ -52,7 +52,7 @@ public class FindKthLargest {
 
     //Suggested solution
     //around twice faster than inserting all nums into heap
-//    public int findKthLargest(int[] nums, int k) {
+//    public static int findKthLargest(int[] nums, int k) {
 //        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 //        //create heap of size K
 //        for (int i = 0; i < k; i++) {
